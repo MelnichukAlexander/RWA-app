@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F41EE8D225BBC1E0054AC97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EE8C225BBC1E0054AC97 /* AppDelegate.swift */; };
+		1F41EE8F225BBC1E0054AC97 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EE8E225BBC1E0054AC97 /* FirstViewController.swift */; };
+		1F41EE91225BBC1E0054AC97 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EE90225BBC1E0054AC97 /* SecondViewController.swift */; };
+		1F41EE94225BBC1E0054AC97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F41EE92225BBC1E0054AC97 /* Main.storyboard */; };
+		1F41EE96225BBC220054AC97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F41EE95225BBC220054AC97 /* Assets.xcassets */; };
+		1F41EE99225BBC220054AC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F41EE97225BBC220054AC97 /* LaunchScreen.storyboard */; };
+		1F41EEA4225BBC220054AC97 /* RWA_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EEA3225BBC220054AC97 /* RWA_AppTests.swift */; };
+		1F41EEAF225BBC220054AC97 /* RWA_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EEAE225BBC220054AC97 /* RWA_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F41EEA0225BBC220054AC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F41EE81225BBC1E0054AC97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F41EE88225BBC1E0054AC97;
+			remoteInfo = "RWA App";
+		};
+		1F41EEAB225BBC220054AC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F41EE81225BBC1E0054AC97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F41EE88225BBC1E0054AC97;
+			remoteInfo = "RWA App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F41EE89225BBC1E0054AC97 /* RWA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RWA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F41EE8C225BBC1E0054AC97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F41EE8E225BBC1E0054AC97 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1F41EE90225BBC1E0054AC97 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1F41EE93225BBC1E0054AC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F41EE95225BBC220054AC97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F41EE98225BBC220054AC97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F41EE9A225BBC220054AC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F41EE9F225BBC220054AC97 /* RWA AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RWA AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F41EEA3225BBC220054AC97 /* RWA_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWA_AppTests.swift; sourceTree = "<group>"; };
+		1F41EEA5225BBC220054AC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F41EEAA225BBC220054AC97 /* RWA AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RWA AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F41EEAE225BBC220054AC97 /* RWA_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWA_AppUITests.swift; sourceTree = "<group>"; };
+		1F41EEB0225BBC220054AC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F41EE86225BBC1E0054AC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EE9C225BBC220054AC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EEA7225BBC220054AC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F41EE80225BBC1E0054AC97 = {
+			isa = PBXGroup;
+			children = (
+				1F41EE8B225BBC1E0054AC97 /* RWA App */,
+				1F41EEA2225BBC220054AC97 /* RWA AppTests */,
+				1F41EEAD225BBC220054AC97 /* RWA AppUITests */,
+				1F41EE8A225BBC1E0054AC97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F41EE8A225BBC1E0054AC97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F41EE89225BBC1E0054AC97 /* RWA App.app */,
+				1F41EE9F225BBC220054AC97 /* RWA AppTests.xctest */,
+				1F41EEAA225BBC220054AC97 /* RWA AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F41EE8B225BBC1E0054AC97 /* RWA App */ = {
+			isa = PBXGroup;
+			children = (
+				1F41EE8C225BBC1E0054AC97 /* AppDelegate.swift */,
+				1F41EE8E225BBC1E0054AC97 /* FirstViewController.swift */,
+				1F41EE90225BBC1E0054AC97 /* SecondViewController.swift */,
+				1F41EE92225BBC1E0054AC97 /* Main.storyboard */,
+				1F41EE95225BBC220054AC97 /* Assets.xcassets */,
+				1F41EE97225BBC220054AC97 /* LaunchScreen.storyboard */,
+				1F41EE9A225BBC220054AC97 /* Info.plist */,
+			);
+			path = "RWA App";
+			sourceTree = "<group>";
+		};
+		1F41EEA2225BBC220054AC97 /* RWA AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F41EEA3225BBC220054AC97 /* RWA_AppTests.swift */,
+				1F41EEA5225BBC220054AC97 /* Info.plist */,
+			);
+			path = "RWA AppTests";
+			sourceTree = "<group>";
+		};
+		1F41EEAD225BBC220054AC97 /* RWA AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F41EEAE225BBC220054AC97 /* RWA_AppUITests.swift */,
+				1F41EEB0225BBC220054AC97 /* Info.plist */,
+			);
+			path = "RWA AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F41EE88225BBC1E0054AC97 /* RWA App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F41EEB3225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA App" */;
+			buildPhases = (
+				1F41EE85225BBC1E0054AC97 /* Sources */,
+				1F41EE86225BBC1E0054AC97 /* Frameworks */,
+				1F41EE87225BBC1E0054AC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RWA App";
+			productName = "RWA App";
+			productReference = 1F41EE89225BBC1E0054AC97 /* RWA App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F41EE9E225BBC220054AC97 /* RWA AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F41EEB6225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA AppTests" */;
+			buildPhases = (
+				1F41EE9B225BBC220054AC97 /* Sources */,
+				1F41EE9C225BBC220054AC97 /* Frameworks */,
+				1F41EE9D225BBC220054AC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F41EEA1225BBC220054AC97 /* PBXTargetDependency */,
+			);
+			name = "RWA AppTests";
+			productName = "RWA AppTests";
+			productReference = 1F41EE9F225BBC220054AC97 /* RWA AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F41EEA9225BBC220054AC97 /* RWA AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F41EEB9225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA AppUITests" */;
+			buildPhases = (
+				1F41EEA6225BBC220054AC97 /* Sources */,
+				1F41EEA7225BBC220054AC97 /* Frameworks */,
+				1F41EEA8225BBC220054AC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F41EEAC225BBC220054AC97 /* PBXTargetDependency */,
+			);
+			name = "RWA AppUITests";
+			productName = "RWA AppUITests";
+			productReference = 1F41EEAA225BBC220054AC97 /* RWA AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F41EE81225BBC1E0054AC97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Alexander Melnichuk";
+				TargetAttributes = {
+					1F41EE88225BBC1E0054AC97 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					1F41EE9E225BBC220054AC97 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 1F41EE88225BBC1E0054AC97;
+					};
+					1F41EEA9225BBC220054AC97 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 1F41EE88225BBC1E0054AC97;
+					};
+				};
+			};
+			buildConfigurationList = 1F41EE84225BBC1E0054AC97 /* Build configuration list for PBXProject "RWA App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F41EE80225BBC1E0054AC97;
+			productRefGroup = 1F41EE8A225BBC1E0054AC97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F41EE88225BBC1E0054AC97 /* RWA App */,
+				1F41EE9E225BBC220054AC97 /* RWA AppTests */,
+				1F41EEA9225BBC220054AC97 /* RWA AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F41EE87225BBC1E0054AC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41EE99225BBC220054AC97 /* LaunchScreen.storyboard in Resources */,
+				1F41EE96225BBC220054AC97 /* Assets.xcassets in Resources */,
+				1F41EE94225BBC1E0054AC97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EE9D225BBC220054AC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EEA8225BBC220054AC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F41EE85225BBC1E0054AC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41EE91225BBC1E0054AC97 /* SecondViewController.swift in Sources */,
+				1F41EE8D225BBC1E0054AC97 /* AppDelegate.swift in Sources */,
+				1F41EE8F225BBC1E0054AC97 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EE9B225BBC220054AC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41EEA4225BBC220054AC97 /* RWA_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F41EEA6225BBC220054AC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41EEAF225BBC220054AC97 /* RWA_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F41EEA1225BBC220054AC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F41EE88225BBC1E0054AC97 /* RWA App */;
+			targetProxy = 1F41EEA0225BBC220054AC97 /* PBXContainerItemProxy */;
+		};
+		1F41EEAC225BBC220054AC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F41EE88225BBC1E0054AC97 /* RWA App */;
+			targetProxy = 1F41EEAB225BBC220054AC97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F41EE92225BBC1E0054AC97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F41EE93225BBC1E0054AC97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F41EE97225BBC220054AC97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F41EE98225BBC220054AC97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F41EEB1225BBC220054AC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F41EEB2225BBC220054AC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F41EEB4225BBC220054AC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F41EEB5225BBC220054AC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F41EEB7225BBC220054AC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RWA App.app/RWA App";
+			};
+			name = Debug;
+		};
+		1F41EEB8225BBC220054AC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RWA App.app/RWA App";
+			};
+			name = Release;
+		};
+		1F41EEBA225BBC220054AC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RWA App";
+			};
+			name = Debug;
+		};
+		1F41EEBB225BBC220054AC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GN99EUVR85;
+				INFOPLIST_FILE = "RWA AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexander-Melnichuk.RWA-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RWA App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F41EE84225BBC1E0054AC97 /* Build configuration list for PBXProject "RWA App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41EEB1225BBC220054AC97 /* Debug */,
+				1F41EEB2225BBC220054AC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F41EEB3225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41EEB4225BBC220054AC97 /* Debug */,
+				1F41EEB5225BBC220054AC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F41EEB6225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41EEB7225BBC220054AC97 /* Debug */,
+				1F41EEB8225BBC220054AC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F41EEB9225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41EEBA225BBC220054AC97 /* Debug */,
+				1F41EEBB225BBC220054AC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F41EE81225BBC1E0054AC97 /* Project object */;
+}
