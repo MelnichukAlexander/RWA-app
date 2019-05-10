@@ -28,6 +28,107 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var calculationsresult: UILabel!
     
+
+    @IBOutlet weak var toraLabel: UILabel!
+    @IBOutlet weak var todaLabel: UILabel!
+    
+    @IBOutlet weak var calcButton: UIButton!
+    
+    
+    // ВЫПАДАЮЩИЙ СПИСОК ВС
+    @IBAction func acselTapped(_ sender: UIButton) {
+        
+        let aircraftlist = UIAlertController(title: "Выберите ВС", message:nil, preferredStyle: .actionSheet)
+        
+        let aircraftname1: String = "Ту-204-100В"
+        let aircraftname2: String = "МС-21"
+        let aircraftname3: String = "Sukhoi Superjet 100"
+        let aircraftname4: String = "Ил-96-300"
+        let aircraftname5: String = "Як-42Д"
+        
+        
+        let aircraftItem1 = UIAlertAction(title: aircraftname1, style: .default, handler: {action in
+            sender.setTitle(aircraftname1, for: .normal)
+            sender.setTitleColor(.green, for: .normal)
+            self.calcButton.isHidden = false
+        })
+        
+        let aircraftItem2 = UIAlertAction(title: aircraftname2, style: .default, handler: {action in
+            let aircraftalert = UIAlertController(title: "Загрузите данные по ВС", message: "Загрузите данные по ВС для выполнения расчетов", preferredStyle: .alert)
+            let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+            aircraftalert.addAction(okbutton)
+            self.present(aircraftalert, animated: true, completion: nil)
+            
+            sender.setTitle(aircraftname2, for: .normal)
+            sender.setTitleColor(.red, for: .normal)
+            self.calcButton.isHidden = true
+            self.calculationsresult.text = ""
+        })
+        
+        let aircraftItem3 = UIAlertAction(title: aircraftname3, style: .default, handler: {action in
+            let aircraftalert = UIAlertController(title: "Загрузите данные по ВС", message: "Загрузите данные по ВС для выполнения расчетов", preferredStyle: .alert)
+            let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+            aircraftalert.addAction(okbutton)
+            self.present(aircraftalert, animated: true, completion: nil)
+        
+            sender.setTitle(aircraftname3, for: .normal)
+            sender.setTitleColor(.red, for: .normal)
+            self.calcButton.isHidden = true
+            self.calculationsresult.text = ""
+        })
+        
+        let aircraftItem4 = UIAlertAction(title: aircraftname4, style: .default, handler: {action in
+            let aircraftalert = UIAlertController(title: "Загрузите данные по ВС", message: "Загрузите данные по ВС для выполнения расчетов", preferredStyle: .alert)
+            let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+            aircraftalert.addAction(okbutton)
+            self.present(aircraftalert, animated: true, completion: nil)
+       
+            sender.setTitle(aircraftname4, for: .normal)
+            sender.setTitleColor(.red, for: .normal)
+            self.calcButton.isHidden = true
+            self.calculationsresult.text = ""
+        })
+        
+        let aircraftItem5 = UIAlertAction(title: aircraftname5, style: .default, handler: {action in
+            let aircraftalert = UIAlertController(title: "Загрузите данные по ВС", message: "Загрузите данные по ВС для выполнения расчетов", preferredStyle: .alert)
+            let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+            aircraftalert.addAction(okbutton)
+            self.present(aircraftalert, animated: true, completion: nil)
+        
+            sender.setTitle(aircraftname5, for: .normal)
+            sender.setTitleColor(.red, for: .normal)
+            self.calcButton.isHidden = true
+            self.calculationsresult.text = ""
+        })
+        
+        aircraftlist.addAction(aircraftItem1)
+        aircraftlist.addAction(aircraftItem2)
+        aircraftlist.addAction(aircraftItem3)
+        aircraftlist.addAction(aircraftItem4)
+        aircraftlist.addAction(aircraftItem5)
+        
+        if let ppc = aircraftlist.popoverPresentationController {
+            ppc.sourceView = sender
+            ppc.sourceRect = sender.bounds
+        }
+        
+        present(aircraftlist, animated: true, completion: nil)
+        
+    }
+    
+    
+    //ЗАГРУЗКА ПОГОДЫ (METAR)
+    @IBAction func metarTapped(_ sender: UIButton) {
+        
+        let metaralert = UIAlertController(title: "Предупреждение", message: "Не подключен источник данных. Введите инфомацию о погоде вручную", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        metaralert.addAction(okbutton)
+        self.present(metaralert, animated: true, completion: nil)
+    }
+    
+    
+    
+    // ВЫПОЛНЕНИЕ РАСЧЕТА
     @IBAction func calcTapped(_ sender: UIButton) {
         
       /*  // Исходные данные по аэродрому
@@ -52,27 +153,27 @@ class FirstViewController: UIViewController {
         
         
         // Исходные данные по аэродрому
-        var tora: Double = Double(toraTextField.text!)!
-        var toda: Double = Double(todaTextField.text!)!
-        var asda: Double = Double(asdaTextField.text!)!
-        var elev: Double = Double(elevTextField.text!)!
-        var slope: Double = Double(slopeTextField.text!)!
-        var hdg: Double = Double(hdgTextField.text!)! // heading of the runway
-        var brit: Bool = false
+        let tora: Double = Double(toraTextField.text!)!
+        let toda: Double = Double(todaTextField.text!)!
+        let asda: Double = Double(asdaTextField.text!)!
+        let elev: Double = Double(elevTextField.text!)!
+        let slope: Double = Double(slopeTextField.text!)!
+        let hdg: Double = Double(hdgTextField.text!)! // heading of the runway
+        let brit: Bool = false
         
         //Исходные данные по ВС
-        var m_max: Double = 105000
+        let m_max: Double = 105000
         
         //ввод данных
         var rwCondition: Int = 1//состояние ВПП (1 - сух, 2 - сляк, 3 - снег)
-        var kBR: Double = Double(kscepTextField.text!)! //коэффициент сцепления
-        var m_vzl: Double = Double(mTextField.text!)! //взлетная масса f18 на loadsheet
-        var t: Double = Double(oatTextField.text!)!
-        var qnh: Double = Double(qnhTextField.text!)!
+        let kBR: Double = Double(kscepTextField.text!)! //коэффициент сцепления
+        let m_vzl: Double = Double(mTextField.text!)! //взлетная масса f18 на loadsheet
+        let t: Double = Double(oatTextField.text!)!
+        let qnh: Double = Double(qnhTextField.text!)!
         //var trip_fuel: Double = 26000
-        var m_vlz_fakt: Double = m_vzl
-        var wind_dir: Double = Double(winddirTextField.text!)! //направление ветра
-        var wind_speed: Double = Double(windspeedTextField.text!)! //скорость ветра
+        let m_vlz_fakt: Double = m_vzl
+        let wind_dir: Double = Double(winddirTextField.text!)! //направление ветра
+        let wind_speed: Double = Double(windspeedTextField.text!)! //скорость ветра
         if rwconditionSegmented.selectedSegmentIndex == 0 {
             rwCondition = 1
         } else if rwconditionSegmented.selectedSegmentIndex == 1 {
@@ -1007,18 +1108,94 @@ class FirstViewController: UIViewController {
 
 
         
+        
     }
-
-    
-   
-    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+
+        let toratap = UITapGestureRecognizer(target: self, action: #selector(toradoubleTapped))
+        toratap.numberOfTapsRequired = 2
+        toraLabel.addGestureRecognizer(toratap)
+
     }
 
+    @objc func toradoubleTapped() {
+        let helpalert = UIAlertController(title: "Справка", message: "TORA (Take-off Run Available) - располагаемая длина разбега", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func todaTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "TODA (Take-off Distance Available) - располагаемая взлетная дистанция", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func asdaTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "ASDA (Accelerate Stop Distance Available) - располагаемая дистанция прерванного взлета", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func elevTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "Elevation - превышение аэродрома — высота самой высокой точки ВПП относительно уровня моря", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+
+    @IBAction func slopeTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "Slope - средний уклон между двумя концами или точками на ВПП (разность высот между двумя указанными точками, деленная на расстояние между ними). Выражается в процентах, перед которыми ставится знак «плюс», если уклон восходящий, или «минус», если уклон нисходящий", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    @IBAction func hdgTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "Heading - курс оси ВПП согласно магнитному курсу", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func kscepTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "Коэффициент сцепления ВПП", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func oatTap(_ sender:
+        UITapGestureRecognizer) {
+            let helpalert = UIAlertController(title: "Справка", message: "OAT - Outside Air Temperature - температура наружного воздуха", preferredStyle: .alert)
+            let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+            helpalert.addAction(okbutton)
+            self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+     @IBAction func qnhTap(_ sender: UITapGestureRecognizer) {
+        let helpalert = UIAlertController(title: "Справка", message: "QNH - атмосферное давление в районе аэродрома, приведенное к среднему уровню моря (MSL). Указывается в гектопаскалях. Сообщается по ATIS и органами УВД по запросу экипажа", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        helpalert.addAction(okbutton)
+        self.present(helpalert, animated: true, completion: nil)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
