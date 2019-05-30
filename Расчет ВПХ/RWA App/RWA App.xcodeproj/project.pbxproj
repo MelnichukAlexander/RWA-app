@@ -14,7 +14,13 @@
 		1F41EE99225BBC220054AC97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F41EE97225BBC220054AC97 /* LaunchScreen.storyboard */; };
 		1F41EEA4225BBC220054AC97 /* RWA_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EEA3225BBC220054AC97 /* RWA_AppTests.swift */; };
 		1F41EEAF225BBC220054AC97 /* RWA_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F41EEAE225BBC220054AC97 /* RWA_AppUITests.swift */; };
+		1F99A15022998D0500FEBB83 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99A14F22998D0500FEBB83 /* Airport.swift */; };
+		1F99A15222998ECB00FEBB83 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99A15122998ECB00FEBB83 /* Model.swift */; };
+		1F99A195229AB58F00FEBB83 /* RWA App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F99A193229AB58F00FEBB83 /* RWA App.xcdatamodeld */; };
 		1F9EE7D82284DFDB00CDE804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9EE7D72284DFDA00CDE804 /* Assets.xcassets */; };
+		1FDA0951229B199400A57E11 /* Realmitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA0950229B199400A57E11 /* Realmitem.swift */; };
+		1FDA0955229B33A200A57E11 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA0954229B33A200A57E11 /* JSONSerializer.swift */; };
+		237CEB4A5A066A030EF73C4A /* Pods_RWA_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2658083DB66816A869EF51FA /* Pods_RWA_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,15 @@
 		1F41EEAA225BBC220054AC97 /* RWA AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RWA AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F41EEAE225BBC220054AC97 /* RWA_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWA_AppUITests.swift; sourceTree = "<group>"; };
 		1F41EEB0225BBC220054AC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F99A14F22998D0500FEBB83 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		1F99A15122998ECB00FEBB83 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1F99A194229AB58F00FEBB83 /* RWA App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RWA App.xcdatamodel"; sourceTree = "<group>"; };
 		1F9EE7D72284DFDA00CDE804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		1FDA0950229B199400A57E11 /* Realmitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realmitem.swift; sourceTree = "<group>"; };
+		1FDA0954229B33A200A57E11 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		2658083DB66816A869EF51FA /* Pods_RWA_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RWA_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26EC6E7F421264F989589E40 /* Pods-RWA App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWA App.debug.xcconfig"; path = "Target Support Files/Pods-RWA App/Pods-RWA App.debug.xcconfig"; sourceTree = "<group>"; };
+		CA1D33D22115B79B5E93E0C1 /* Pods-RWA App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWA App.release.xcconfig"; path = "Target Support Files/Pods-RWA App/Pods-RWA App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237CEB4A5A066A030EF73C4A /* Pods_RWA_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +99,8 @@
 				1F41EEAD225BBC220054AC97 /* RWA AppUITests */,
 				1F41EE8A225BBC1E0054AC97 /* Products */,
 				1F9EE7D72284DFDA00CDE804 /* Assets.xcassets */,
+				699EF147889848CA9C73FCB9 /* Pods */,
+				B4E9BAD35A959D2D57F8D3AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +117,16 @@
 		1F41EE8B225BBC1E0054AC97 /* RWA App */ = {
 			isa = PBXGroup;
 			children = (
+				1F99A14E22998C7A00FEBB83 /* Model */,
 				1F41EE8C225BBC1E0054AC97 /* AppDelegate.swift */,
 				1F41EE8E225BBC1E0054AC97 /* FirstViewController.swift */,
 				1F41EE90225BBC1E0054AC97 /* SecondViewController.swift */,
+				1FDA0954229B33A200A57E11 /* JSONSerializer.swift */,
 				1F41EE92225BBC1E0054AC97 /* Main.storyboard */,
 				1F41EE97225BBC220054AC97 /* LaunchScreen.storyboard */,
 				1F41EE9A225BBC220054AC97 /* Info.plist */,
+				1F99A193229AB58F00FEBB83 /* RWA App.xcdatamodeld */,
+				1FDA0950229B199400A57E11 /* Realmitem.swift */,
 			);
 			path = "RWA App";
 			sourceTree = "<group>";
@@ -128,6 +149,32 @@
 			path = "RWA AppUITests";
 			sourceTree = "<group>";
 		};
+		1F99A14E22998C7A00FEBB83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F99A14F22998D0500FEBB83 /* Airport.swift */,
+				1F99A15122998ECB00FEBB83 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		699EF147889848CA9C73FCB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26EC6E7F421264F989589E40 /* Pods-RWA App.debug.xcconfig */,
+				CA1D33D22115B79B5E93E0C1 /* Pods-RWA App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4E9BAD35A959D2D57F8D3AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2658083DB66816A869EF51FA /* Pods_RWA_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F41EEB3225BBC220054AC97 /* Build configuration list for PBXNativeTarget "RWA App" */;
 			buildPhases = (
+				12E35FEF6F6F63160C50E286 /* [CP] Check Pods Manifest.lock */,
 				1F41EE85225BBC1E0054AC97 /* Sources */,
 				1F41EE86225BBC1E0054AC97 /* Frameworks */,
 				1F41EE87225BBC1E0054AC97 /* Resources */,
+				8F23E33D27CC38CC7895413E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,12 +303,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12E35FEF6F6F63160C50E286 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RWA App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F23E33D27CC38CC7895413E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RWA App/Pods-RWA App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F41EE85225BBC1E0054AC97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F99A15222998ECB00FEBB83 /* Model.swift in Sources */,
 				1F41EE91225BBC1E0054AC97 /* SecondViewController.swift in Sources */,
+				1F99A15022998D0500FEBB83 /* Airport.swift in Sources */,
+				1FDA0955229B33A200A57E11 /* JSONSerializer.swift in Sources */,
+				1F99A195229AB58F00FEBB83 /* RWA App.xcdatamodeld in Sources */,
+				1FDA0951229B199400A57E11 /* Realmitem.swift in Sources */,
 				1F41EE8D225BBC1E0054AC97 /* AppDelegate.swift in Sources */,
 				1F41EE8F225BBC1E0054AC97 /* FirstViewController.swift in Sources */,
 			);
@@ -432,6 +518,7 @@
 		};
 		1F41EEB4225BBC220054AC97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26EC6E7F421264F989589E40 /* Pods-RWA App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +538,7 @@
 		};
 		1F41EEB5225BBC220054AC97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1D33D22115B79B5E93E0C1 /* Pods-RWA App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,6 +678,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1F99A193229AB58F00FEBB83 /* RWA App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1F99A194229AB58F00FEBB83 /* RWA App.xcdatamodel */,
+			);
+			currentVersion = 1F99A194229AB58F00FEBB83 /* RWA App.xcdatamodel */;
+			path = "RWA App.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F41EE81225BBC1E0054AC97 /* Project object */;
 }

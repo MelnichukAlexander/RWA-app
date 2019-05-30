@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
+
+var brit: Bool = false
 
 class FirstViewController: UIViewController {
 
@@ -34,6 +38,104 @@ class FirstViewController: UIViewController {
     
     @IBOutlet weak var calcButton: UIButton!
     
+    
+    // ЗАПУСК ПАРСИНГА JSON И ВНЕСЕНИЕ В БАЗУ ДАННЫХ REALM
+    @IBAction func dnldrwdataTapped(_ sender: UIButton) {
+            let serializer = JSONSerializer()
+            serializer.serialize(input: "Airports")
+        
+        print (Realm.Configuration.defaultConfiguration.fileURL) //вывод в консоль адреса папки с базой данных
+       
+        let dbalert = UIAlertController(title: "Справка", message: "База данных аэродромов обновлена", preferredStyle: .alert)
+        let okbutton = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
+        dbalert.addAction(okbutton)
+        self.present(dbalert, animated: true, completion: nil)
+    }
+    
+    
+    // ВЫЗОВ СПИСКА АЭРОДРОМОВ
+    @IBAction func rwListTapped(_ sender: UIButton) {
+        
+  /*
+        let rwlist = UIAlertController(title: "Выберите ВПП", message:nil, preferredStyle: .actionSheet)
+        
+            var i: Int = 1
+            while i < 100 {
+            var rwname: String = "\(Int(i))"
+            //var i: Int = 1
+            //var rwname: String = "\(Int(i))"
+            var rwItem = UIAlertAction(title: rwname, style: .default, handler: {action in
+                sender.setTitle(rwname, for: .normal)
+               // sender.setTitleColor(.green, for: .normal)
+               //print(rwname)
+            })
+
+            rwlist.addAction(rwItem)
+                i += 1
+            }
+        
+        if let ppc = rwlist.popoverPresentationController {
+            ppc.sourceView = sender
+            ppc.sourceRect = sender.bounds
+        }
+       
+        present(rwlist, animated: true, completion: nil)
+    */
+        
+        
+       // let uirealm = try! Realm()
+        let uirealm = try! Realm()
+        var runways = uirealm.objects(Airport.self)
+        
+    /* вывод первого элемента массива
+        var test = Airport()
+        test = runways[1]
+        print (test)
+    */
+        
+    /* вывод определенного свойства элемента массива
+        var test2: Double
+        test2 = runways[0].elev
+        print (test2)
+    */
+        
+        var elementscount = runways.count
+        
+        var dedicrw = Airport()
+        
+        let rwlist = UIAlertController(title: "Выберите ВПП", message:nil, preferredStyle: .actionSheet)
+        
+        
+        
+        for dedicrw in runways {
+            var rwname: String = dedicrw.adrwy
+            var rwItem = UIAlertAction(title: rwname, style: .default, handler: {action in
+                sender.setTitle(rwname, for: .normal)
+                sender.setTitleColor(.green, for: .normal)
+                self.toraTextField.text = String(dedicrw.tora_available_run_length)
+                self.todaTextField.text = String(dedicrw.toda_available_takeoff_distance)
+                self.asdaTextField.text = String(dedicrw.asda_accelerate_stop_distance)
+                self.elevTextField.text = String(dedicrw.elev)
+                self.slopeTextField.text = String(dedicrw.runway_slope)
+                self.hdgTextField.text = String(dedicrw.hdg)
+                brit = dedicrw.brit
+                })
+            
+            rwlist.addAction(rwItem)
+        }
+        
+        if let ppc = rwlist.popoverPresentationController {
+            ppc.sourceView = sender
+            ppc.sourceRect = sender.bounds
+        }
+        
+        present(rwlist, animated: true, completion: nil)
+     
+
+        
+    }
+    
+
     
     // ВЫПАДАЮЩИЙ СПИСОК ВС
     @IBAction func acselTapped(_ sender: UIButton) {
@@ -153,13 +255,13 @@ class FirstViewController: UIViewController {
         
         
         // Исходные данные по аэродрому
-        let tora: Double = Double(toraTextField.text!)!
-        let toda: Double = Double(todaTextField.text!)!
-        let asda: Double = Double(asdaTextField.text!)!
-        let elev: Double = Double(elevTextField.text!)!
-        let slope: Double = Double(slopeTextField.text!)!
-        let hdg: Double = Double(hdgTextField.text!)! // heading of the runway
-        let brit: Bool = false
+        var tora: Double = Double(toraTextField.text!)!
+        var toda: Double = Double(todaTextField.text!)!
+        var asda: Double = Double(asdaTextField.text!)!
+        var elev: Double = Double(elevTextField.text!)!
+        var slope: Double = Double(slopeTextField.text!)!
+        var hdg: Double = Double(hdgTextField.text!)! // heading of the runway
+        print ("Проверка brit:", brit)
         
         //Исходные данные по ВС
         let m_max: Double = 105000
@@ -1116,7 +1218,6 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
         let toratap = UITapGestureRecognizer(target: self, action: #selector(toradoubleTapped))
         toratap.numberOfTapsRequired = 2
         toraLabel.addGestureRecognizer(toratap)
